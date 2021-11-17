@@ -3,16 +3,18 @@ const TaskCard=(props)=>{
 
     const[edit, setEdit] = useState(false)
     const[changeTask, setChangeTask] = useState('')
-    // const[complete, setComplete] = useState(false)
 
+
+    // calls the API with DELETE method as soon as "Delete" Button is clicked
     const HandleDelete =(e) => {
         fetch(`https://jsonplaceholder.typicode.com/posts/${e.target.value}`, {
           method: "DELETE",
         });
         e.target.parentElement.parentElement.remove()
-        // console.log(`${e.target.value}`);
       };
 
+
+      // calls the API with PUT method as soon as the "Update" Button is clicked. 
     const HandleEdit = (e) => {
         if(!edit){
             setEdit(true)
@@ -23,7 +25,6 @@ const TaskCard=(props)=>{
                 id: `${e.target.value}`,
                 title:  `${changeTask}`,
                 userId: 1,
-                // completed: `${complete}`
             }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
@@ -41,23 +42,20 @@ const TaskCard=(props)=>{
         }
     }
 
+
+
+// edits change Task as the input field is changed
     const changeTodo =(e) =>{
         setChangeTask(e.target.value)
-        // console.log(changeTask)
     }
 
-    // const HandleComplete =(e) => {
-    //     setComplete(!e.target.value)
-    // }
     return(
         <div className="card">
             <div className={props.completed ? "completed" : "pending"}/>
             {edit ? <div className="taskInput">
                 <input type="text" placeholder={props.title} onChange={changeTodo} className="taskText"/>
-                {/* <button className="buttonInput" value={props.completed} onClick={HandleComplete}>Change Complete Status</button> */}
             </div>  : <div className="task"><span> {props.title}</span></div>}
             
-            {/* <span>{props.completed ? "YESSSSSSSS" : "NOOOOOOOOOO"}</span> */}
             <div className="action">   
             <button value={props.id} onClick={HandleEdit} className="buttonImage">
                 Update

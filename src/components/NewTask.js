@@ -3,6 +3,7 @@ const NewTask=(props)=>{
 
     const[newTask, setNewTask] = useState('')
 
+    // calls the API with POST method as soon as "ADD" Button is clicked
     const AddNewTask = () => {
         if(newTask !== ''){
             fetch(`https://jsonplaceholder.typicode.com/posts`, {
@@ -22,15 +23,12 @@ const NewTask=(props)=>{
         } else{
             alert("Add a task")
         }
-        
-
         setNewTask('');
-
     }
 
+// edits newTask as the input field is changed
     const handleNewTaskChange = (e) => {
         setNewTask(e.target.value);
-        // console.log(newTask)
     }
     return(
 

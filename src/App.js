@@ -8,9 +8,7 @@ function App() {
   const [items, setitems] = useState([]);
   const [DataisLoaded, setDataisLoaded] = useState(false);
   
-  // const[changeTask, setChangeTask] = useState()
-
-  
+  // fetches the taks list from API as soon as the window is loaded and stores the response in an array
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/todos')
     .then(response => response.json())
@@ -22,8 +20,11 @@ function App() {
 
   return (
     <div className="App">
+      {/* To add new tasks */}
       <NewTask/>
       <h2 className="heading">All Tasks</h2>
+
+      {/* iterates through the array and calls TaskCard and sends the required details as props */}
       {
           items.map((item) => ( 
             <TaskCard 
