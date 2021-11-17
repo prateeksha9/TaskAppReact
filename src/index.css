@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: lightgray;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.card{
+  background-color: aliceblue;
+  margin-left: 15%;
+  width: 80%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.completed{
+  background-color: green;
+  width: 10px;
+}
+
+.pending{
+  background-color: #8B0000;
+  width: 10px;
+}
+
+.task{
+  width: 70%;
+  padding-left: 2px;
+  margin-top: 15px; 
+  margin-left: 15px; 
+  margin-bottom: 15px;
+}
+
+.action{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-around;
+  margin-right: 5% ;
+  width: 20%;
+  margin-left: 10%;
+  padding-left: 10px;
+  
+}
+
+.buttonImage{
+  /* width: 25px; */
+  height: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 8px;
+  background-color: saddlebrown;
+  color: aliceblue;
+  border-width: 0;
+}
+
+.taskInput{
+  width: 70%;
+  /* background-color: red; */
+  padding-left: 2px;
+  margin-top: 15px; 
+  margin-left: 15px; 
+  margin-bottom: 15px;
+  /* background-color:; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.taskText{
+  width: 99.5%;
+  padding-left: 2px;
+  margin-left: -2px; 
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+}
+
+.buttonInput{
+  width: 161px;
+  height: 25px;
+  margin-right: 8px;
+  background-color: rgb(202, 91, 11);
+  color: aliceblue;
+  border-width: 0;
+}
+
+.buttonInput:hover{
+  background-color: rgb(114, 41, 8); 
+}
+
+.buttonImage:hover{
+  background-color: rgb(114, 41, 8); 
+}
+
+.heading{
+  margin-left:15% ;
+}
+
+.newTask{
+ background-color: indigo;
+ width: 100%;
+ padding-left: 15%;
+ color: aliceblue;
+}
+
+.newCard{
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+}
+.newInput{
+  width: 110%;
+  /* margin-right: 5%; */
+  margin-left: 5%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-width: 0px;
+}
+
+.buttonInput{
+  height: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  /* margin-right: 8px; */
+  background-color: saddlebrown;
+  color: aliceblue;
+  border-width: 0; 
+  margin-left: 10px;
+  width: 90px;
+}
+
+.newTaskHead{
+  margin-top: 15px;
+  width: 22%;
+}
