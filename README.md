@@ -1,3 +1,13 @@
+# Task App using React Js
+
+Add, Update and Delete Tasks on this task app created using React Js. 
+
+![image](https://user-images.githubusercontent.com/66215313/142476680-deaca41f-cd5c-4c33-a9a1-4751bdbbdc3a.png)
+
+
+# Important links
+Api Used: https://jsonplaceholder.typicode.com/todos
+Youtube Explaination:
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
